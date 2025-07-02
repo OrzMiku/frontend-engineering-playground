@@ -1,0 +1,6 @@
+{
+  "name": "@qqmc/prettier-config",
+  "private": true,
+  "type": "module",
+  "main": "index.js"
+}
