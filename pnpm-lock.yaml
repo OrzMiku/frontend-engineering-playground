@@ -4,6 +4,24 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/node':
+      specifier: ^24.0.10
+      version: 24.0.10
+    eslint:
+      specifier: 9.30.1
+      version: 9.30.1
+    prettier:
+      specifier: 3.6.2
+      version: 3.6.2
+    tsx:
+      specifier: ^4.20.3
+      version: 4.20.3
+    typescript:
+      specifier: 5.8.3
+      version: 5.8.3
+
 importers:
 
   .:
@@ -15,22 +33,22 @@ importers:
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
-        specifier: ^24.0.10
+        specifier: 'catalog:'
         version: 24.0.10
       eslint:
-        specifier: ^9.30.1
+        specifier: 'catalog:'
         version: 9.30.1(jiti@2.4.2)
       prettier:
-        specifier: ^3.6.2
+        specifier: 'catalog:'
         version: 3.6.2
       tsx:
-        specifier: ^4.20.3
+        specifier: 'catalog:'
         version: 4.20.3
       turbo:
         specifier: ^2.5.4
         version: 2.5.4
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   apps/web:
@@ -57,15 +75,24 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(prisma@6.11.0(typescript@5.8.3))(typescript@5.8.3)
     devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.0.10
       prisma:
         specifier: ^6.11.0
         version: 6.11.0(typescript@5.8.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.3
 
   packages/eslint-config:
     devDependencies:
       '@eslint/js':
         specifier: ^9.30.1
         version: 9.30.1
+      eslint:
+        specifier: 'catalog:'
+        version: 9.30.1(jiti@2.4.2)
       eslint-config-prettier:
         specifier: ^10.1.5
         version: 10.1.5(eslint@9.30.1(jiti@2.4.2))
@@ -73,7 +100,11 @@ importers:
         specifier: ^8.35.1
         version: 8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
 
-  packages/prettier-config: {}
+  packages/prettier-config:
+    devDependencies:
+      prettier:
+        specifier: 'catalog:'
+        version: 3.6.2
 
 packages:
 
