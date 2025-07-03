@@ -5,10 +5,14 @@
   "types": "dist/client.d.ts",
   "scripts": {
     "build": "tsc",
-    "db:generate": "prisma generate"
+    "db:generate": "prisma generate",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write ."
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
     "prisma": "^6.11.0",
     "typescript": "catalog:"
   },
