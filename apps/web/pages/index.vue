@@ -1,15 +1,10 @@
-<script setup lang="ts">
-import { Button } from '@qqmc/components';
-useHead({
-  title: 'Hello World',
-});
-const msg = 'Hello World!';
-</script>
-
 <template>
-  <div
-    class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-50 text-4xl"
-  >
-    <Button>{{ msg }}</Button>
+  <div class="p-4">
+    <h2 class="text-2xl font-bold">
+      Welcome to {{ $config.public.sitename }}!
+    </h2>
+    <p class="text-gray-700 dark:text-gray-300">
+      This site is under development.
+    </p>
   </div>
 </template>

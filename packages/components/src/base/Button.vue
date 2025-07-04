@@ -1,6 +1,6 @@
 <template>
   <button :type="type || 'button'" :disabled="disabled">
-    <slot />
+    <slot />！！！！！
   </button>
 </template>
 
