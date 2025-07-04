@@ -1,0 +1,18 @@
+{
+  "name": "@qqmc/components",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write ."
+  },
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "@qqmc/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "vue": "^3.5.17"
+  }
+}
