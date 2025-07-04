@@ -26,12 +26,6 @@ importers:
 
   .:
     devDependencies:
-      '@qqmc/eslint-config':
-        specifier: workspace:*
-        version: link:packages/eslint-config
-      '@qqmc/prettier-config':
-        specifier: workspace:*
-        version: link:packages/prettier-config
       '@types/node':
         specifier: 'catalog:'
         version: 24.0.10
