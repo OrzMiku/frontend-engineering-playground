@@ -3,7 +3,7 @@
   "globalEnv": ["DATABASE_URL"],
   "tasks": {
     "build": {
-      "dependsOn": ["db:generate", "^build"],
+      "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".nuxt/**", "dist/**", "output/**"]
     },
@@ -14,14 +14,8 @@
       "cache": false
     },
     "dev": {
-      "dependsOn": ["db:generate"],
       "cache": false,
       "persistent": true
-    },
-    "db:generate": {
-      "cache": true,
-      "inputs": ["prisma/schema.prisma", ".env*"],
-      "outputs": ["./node_modules/@prisma/client"]
     }
   }
 }
