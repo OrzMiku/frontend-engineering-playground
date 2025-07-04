@@ -11,6 +11,8 @@
     "preinstall": "prisma generate"
   },
   "devDependencies": {
+    "@qqmc/eslint-config": "workspace:*",
+    "@qqmc/prettier-config": "workspace:*",
     "@qqmc/tsconfig": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",

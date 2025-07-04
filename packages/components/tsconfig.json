@@ -1,7 +1,4 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": [
-    "@qqmc/tsconfig/tsconfig.base.json",
-    "@qqmc/tsconfig/tsconfig.vue.json"
-  ]
+  "extends": ["@qqmc/tsconfig/base.json", "@qqmc/tsconfig/vue.json"]
 }

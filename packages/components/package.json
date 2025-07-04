@@ -1,8 +1,7 @@
 {
   "name": "@qqmc/components",
   "private": true,
-  "main": "index.ts",
-  "types": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint . --fix && prettier --write ."
@@ -15,9 +14,10 @@
     "eslint": "catalog:",
     "eslint-plugin-vue": "^10.3.0",
     "prettier": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vue": "^3.5.17"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.5.17"
   }
 }
