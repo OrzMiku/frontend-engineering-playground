@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -12,18 +12,18 @@ model User {
   username       String         @unique
   email          String         @unique
   password_hash  String
-  refresh_tokens RefreshToken[]
   created_at     DateTime       @default(now())
   updated_at     DateTime       @updatedAt
+  refresh_tokens RefreshToken[]
 }
 
 model RefreshToken {
   id         String   @id @default(uuid())
   token      String   @unique
   user_id    String
-  user       User     @relation(fields: [user_id], references: [id])
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
+  user       User     @relation(fields: [user_id], references: [id])
 
-  @@index([user_id], name: "idx_refresh_token_user_id")
+  @@index([user_id], map: "idx_refresh_token_user_id")
 }
