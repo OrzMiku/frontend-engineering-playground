@@ -7,8 +7,7 @@
     "build": "tsc",
     "db:generate": "prisma generate",
     "lint": "eslint . && prettier --check .",
-    "lint:fix": "eslint . --fix && prettier --write .",
-    "postinstall": "db:generate"
+    "lint:fix": "eslint . --fix && prettier --write ."
   },
   "devDependencies": {
     "@types/node": "catalog:",
