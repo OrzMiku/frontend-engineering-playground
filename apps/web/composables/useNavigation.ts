@@ -1,7 +1,4 @@
-const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-];
+import navItems from '~/config/navigation';
 
 export default function useNavigation() {
   return {
