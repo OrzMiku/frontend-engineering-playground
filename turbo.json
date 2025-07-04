@@ -1,6 +1,5 @@
 {
   "$schema": "https://turborepo.com/schema.json",
-  "ui": "tui",
   "globalEnv": ["DATABASE_URL"],
   "tasks": {
     "build": {
@@ -15,6 +14,7 @@
       "cache": false
     },
     "dev": {
+      "dependsOn": ["db:generate"],
       "cache": false,
       "persistent": true
     },
