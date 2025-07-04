@@ -9,7 +9,12 @@
   },
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
+    "@qqmc/eslint-config": "workspace:*",
+    "@qqmc/prettier-config": "workspace:*",
     "@qqmc/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "eslint-plugin-vue": "^10.3.0",
+    "prettier": "catalog:",
     "typescript": "catalog:"
   },
   "dependencies": {

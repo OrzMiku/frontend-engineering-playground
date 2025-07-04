@@ -2,11 +2,20 @@
   "name": "@qqmc/eslint-config",
   "private": true,
   "type": "module",
-  "main": "index.js",
+  "main": "./base.js",
+  "exports": {
+    ".": {
+      "import": "./base.js"
+    },
+    "./vue": {
+      "import": "./vue.js"
+    }
+  },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
     "eslint": "catalog:",
     "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-vue": "^10.3.0",
     "typescript-eslint": "^8.35.1"
   }
 }
